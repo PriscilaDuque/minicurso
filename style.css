@@ -36,6 +36,13 @@ main > section button{
   font-weight: 500;
   letter-spacing: -0.6px; /* Diminui ou aumenta o tamanho entre as letras*/
   line-height: 20px;
-  text-transform: uppercase;
   padding: 9px 23px; /*Altera a distância entre os elementos dentro do botão*/
+  text-transform: uppercase;
+}
+
+#detalhes-container{
+  font-weight: bold;
+  list-style-type: none;
+  height: 30px;
+  width: 90%;
 }
