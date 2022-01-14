@@ -4,9 +4,14 @@ const nomeDoPersonagem = document.querySelector('#nome');
 const especie = document.querySelector('#especie');
 const condicao = document.querySelector('#status'); 
 
+gerarValorAleatorio = () => {
+  return Math.floor(Math.random() *671);
+}
 
 pegarPersonagem = () => {
-  return fetch(`https://rickandmortyapi.com/api/character/2`, {
+  let numeroAleatorio = gerarValorAleatorio();
+
+  return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
     method: 'GET',
     headers: {
       Accept: 'application/json',
@@ -16,7 +21,7 @@ pegarPersonagem = () => {
     imagem.src = data.image;
     imagem.alt = data.name;
     nomeDoPersonagem.innerHTML = data.name;
-    especie.innerHTML = data.especies;
+    especie.innerHTML = data.species;
     condicao.innerHTML = data.status;
 
   });
