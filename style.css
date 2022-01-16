@@ -46,6 +46,10 @@ main > section {
   margin-right: auto;
 }
 
+main > section ul {
+  list-style-type: none;
+}
+
 main > section button{
   background-color: #00BFFF; 
   border: none;
