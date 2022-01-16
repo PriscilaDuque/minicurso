@@ -40,5 +40,20 @@ pegarPersonagem = (numeroPersonagem, posicaoImagem) => {
     condicoes[posicaoImagem].innerHTML = data.status;
   });
 }
+
+atualizarImagens = () => {
+  /**Criei a função atualizarImagens que tem o objetivo de atualizar imagens não repetidas. 
+   * O número gerado é baseado na quantidade de imagens encontradas pelo querySelectorAll através do atributo length, que é o número total de imgs do HTML.
+   * Ela Pega o número do personagem e sua posição e atualiza as imagens 
+  */
+  let numeroImagens = imagens.length;
+  let numerosPersonagens = gerarValoresUnicos(numeroImagens);
+  let posicaoImagem = 0;
+  for (let numeroPersonagem of numerosPersonagens) {
+    pegarPersonagem(numeroPersonagem, posicaoImagem);
+    posicaoImagem++;
+  }
+}
+
 botao.onclick = pegarPersonagem;
 
