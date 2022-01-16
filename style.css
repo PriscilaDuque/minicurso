@@ -40,6 +40,12 @@ main > section img {
   width: 400px;
 }
 
+main > section {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 main > section button{
   background-color: #00BFFF; 
   border: none;
@@ -52,19 +58,4 @@ main > section button{
   line-height: 20px;
   padding: 9px 23px; /*Altera a distância entre os elementos dentro do botão*/
   text-transform: uppercase;
-}
-
-#detalhes-container{
-  font-weight: bold;
-  list-style-type: none;
-  width: 90%;
-}
-
-#detalhes-container > li{
-  align-items: baseline;
-  display: flex;
-}
-
-#detalhes-container > li p{
-  color: white;
 }
