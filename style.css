@@ -35,9 +35,9 @@ main > section div {
 }
 
 main > section img {
-  height: 300px;
-  margin: 15px 0;
-  width: 300px;
+  border-radius: 50%;
+  height: 400px;  
+  width: 400px;
 }
 
 main > section button{
