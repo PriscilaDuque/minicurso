@@ -2,24 +2,49 @@
 
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8"> <!--charset indica para o navegador qual alfabeto usar-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Torna o HTML compatível com o Navegador da Microsoft (Edge)-->
-    <meta name="viewport" content"width=device-width, initial-scale=1.0"> <!--Importante para a Responsividade da Tela (ajuste de tamanho de acordo com o dispositivo usado)-->
-    <title>Conheça Rick and Morty</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content"width=device-width, initial-scale=1.0">
+    <title>Conheça Rick And Morty</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head> 
 
   <body>
+    <header class="cabecalho">
+      <h1>Rick And Morty</h1>
+    </header>
+
     <main>
-      <section>
-        <img alt="Imagem do Rick fazendo careta na cara do Morty" src="https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg">
-        <ul id="detalhes-container">
-          <li>Nome: <p id="nome"></p> </li>
-          <li>Espécie: <p id="especie"></p> </li>
-          <li>Está vivo? <p id="status"></p> </li>
-        </ul>
-        <button>Conheça um Personagem Rick And Morty</button>
+      <section id="detalhes-container">
+        <div>
+          <img  class="imagemPersonagem" alt="Imagem do Rick fazendo careta na cara do Morty" src="https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg">
+          <ul>
+            <li>Nome: <span class="nome"></span> </li>
+            <li>Espécie: <span class="especie"></span> </li>
+            <li>Está vivo? <span class="status"></span> </li>
+          </ul>
+        </div>
+
+        <div>
+          <img  class="imagemPersonagem" alt="Imagem do Rick fazendo careta na cara do Morty" src="https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg">
+          <ul>
+            <li>Nome: <span class="nome"></span> </li>
+            <li>Espécie: <span class="especie"></span> </li>
+            <li>Está vivo? <span class="status"></span> </li>
+          </ul>
+        </div>
+
+        <div>
+          <img  class="imagemPersonagem" alt="Imagem do Rick fazendo careta na cara do Morty" src="https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg">
+          <ul>
+            <li>Nome: <span class="nome"></span> </li>
+            <li>Espécie: <span class="especie"></span> </li>
+            <li>Está vivo? <span class="status"></span> </li>
+          </ul>
+        </div>
+
+        <button>Conheça os Personagens</button>
       </section>
     </main>
   </body>
