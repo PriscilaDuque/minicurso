@@ -27,6 +27,11 @@ main{
   position: relative;
 }
 
+main > section div {
+  display:inline-block;
+  padding: 20px;
+}
+
 main > section img {
   height: 300px;
   margin: 15px 0;
