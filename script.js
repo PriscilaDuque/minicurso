@@ -1,11 +1,13 @@
-const imagem = document.querySelector('img');/** Textos com aspas simples são mais manipulavéis */
-const botao = document.querySelector('button');/**Textos com aspas duplas são menos manipuláveis */
-const nomeDoPersonagem = document.querySelector('#nome');
-const especie = document.querySelector('#especie');
-const condicao = document.querySelector('#status'); 
+/**Na documentação Javascrip tem o seletor document.querySelectorAll que tem o objetivo de pegar todos os itens de um elemento. Usei esse seletor para pegar todas as imagens e seus campos de informação do arquivo index.html*/
+const imagens = document.querySelectorAll('img.imagemPersonagem');
+const nomeDosPersonagens = document.querySelectorAll('p.nome');
+const especies = document.querySelectorAll('p.especie');
+const condicoes = document.querySelectorAll('p.status');
+const botao = document.querySelector('button');
 
+/**Essa função tem o objetivo de gerar números aleatórios inteiros de 1 a 826 que é o número de personagens da série Rick And Morty*/
 gerarValorAleatorio = () => {
-  return Math.floor(Math.random() *671);
+  return Math.floor(Math.random() * 826);
 }
 
 pegarPersonagem = () => {
