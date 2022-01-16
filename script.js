@@ -1,8 +1,8 @@
 /**Na documentação Javascrip tem o seletor document.querySelectorAll que tem o objetivo de pegar todos os itens de um elemento. Usei esse seletor para pegar todas as imagens e seus campos de informação do arquivo index.html*/
 const imagens = document.querySelectorAll('img.imagemPersonagem');
-const nomeDosPersonagens = document.querySelectorAll('p.nome');
-const especies = document.querySelectorAll('p.especie');
-const condicoes = document.querySelectorAll('p.status');
+const nomeDosPersonagens = document.querySelectorAll('span.nome');
+const especies = document.querySelectorAll('span.especie');
+const condicoes = document.querySelectorAll('span.status');
 const botao = document.querySelector('button');
 
 
