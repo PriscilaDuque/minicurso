@@ -5,8 +5,9 @@ const especies = document.querySelectorAll('p.especie');
 const condicoes = document.querySelectorAll('p.status');
 const botao = document.querySelector('button');
 
-/**Essa função tem o objetivo de gerar números aleatórios inteiros de 1 a 826 que é o número de personagens da série Rick And Morty*/
+
 gerarValorAleatorio = () => {
+  /**Essa função tem o objetivo de gerar números aleatórios inteiros de 1 a 826 que é o número de personagens da série Rick And Morty*/
   return Math.floor(Math.random() * 826);
 }
 
@@ -23,21 +24,20 @@ gerarValoresUnicos = (numeroDeValores = 3) => {
   return conjunto;
 }
 
-pegarPersonagem = () => {
-  let numeroAleatorio = gerarValorAleatorio()
-  return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
+pegarPersonagem = (numeroPersonagem, posicaoImagem) => {
+  /**Alterada a função pegarPersonagem para receber o número do personagem e a posição da imagem no HTML como argumentos. A função pega os dados da API de acordo com o número recebido e altera a imagem e os campos de informação no HTML. Como a imagem e os campos de informação são uma lista, a alteração acontece pelo índice recebido no argumento posicaoImagem. */
+  fetch(`https://rickandmortyapi.com/api/character/${numeroPersonagem}`, {
     method: 'GET',
     headers: {
       Accept: 'application/json',
       "Content-type": 'application/json'
     }
   }).then((response) => response.json()).then((data) => {
-    imagem.src = data.image;
-    imagem.alt = data.name;
-    nomeDoPersonagem.innerHTML = data.name;
-    especie.innerHTML = data.species;
-    condicao.innerHTML = data.status;
-
+    imagens[posicaoImagem].src = data.image;
+    imagens[posicaoImagem].alt = data.name;
+    nomeDosPersonagens[posicaoImagem].innerHTML = data.name;
+    especies[posicaoImagem].innerHTML = data.species;
+    condicoes[posicaoImagem].innerHTML = data.status;
   });
 }
 botao.onclick = pegarPersonagem;
