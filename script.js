@@ -55,5 +55,5 @@ atualizarImagens = () => {
   }
 }
 
-botao.onclick = pegarPersonagem;
+botao.onclick = atualizarImagens; //Alterar botão onclick
 
