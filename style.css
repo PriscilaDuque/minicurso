@@ -9,6 +9,16 @@ body {
   width: 100%;
 }
 
+.cabecalho {
+  color: white;
+  font-family: cursive;
+  font-size: 40px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-shadow:	10px	10px	10px	black;
+}
+
 main{
   align-items: center;
   display: flex;
