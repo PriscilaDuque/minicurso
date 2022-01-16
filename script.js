@@ -10,9 +10,21 @@ gerarValorAleatorio = () => {
   return Math.floor(Math.random() * 826);
 }
 
-pegarPersonagem = () => {
-  let numeroAleatorio = gerarValorAleatorio();
+gerarValoresUnicos = (numeroDeValores = 3) => {
+  /**Esta função devolve uma lista de personagens sem repetições. Para isso utilizei o objeto Set.
+   * Recebe numeroDeValores como argumento, permitindo que qualquer número de valores não repetidos seja retornado. O padrão de valores é 3.
+  */
+  let conjunto = new Set();
+  let numeroAleatorio;
+  while (conjunto.size < numeroDeValores) {
+    numeroAleatorio = gerarValorAleatorio();
+    conjunto.add(numeroAleatorio);
+  }
+  return conjunto;
+}
 
+pegarPersonagem = () => {
+  let numeroAleatorio = gerarValorAleatorio()
   return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
     method: 'GET',
     headers: {
